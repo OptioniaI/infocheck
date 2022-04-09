@@ -1,0 +1,79 @@
+local Info = Instance.new("ScreenGui")
+local main = Instance.new("Frame")
+local title = Instance.new("TextLabel")
+local icon = Instance.new("ImageLabel")
+local clip = Instance.new("Frame")
+local join = Instance.new("TextButton")
+local UICorner = Instance.new("UICorner")
+local UICorner_2 = Instance.new("UICorner")
+
+Info.Name = "Info"
+Info.Parent = game.CoreGui
+Info.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+main.Name = "main"
+main.Parent = Info
+main.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+main.Position = UDim2.new(0, 800, 0, -15)
+main.Size = UDim2.new(0, 404, 0, 48)
+main.Visible = true
+main.Active = true
+
+title.Name = "title"
+title.Parent = main
+title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+title.BackgroundTransparency = 1.000
+title.Position = UDim2.new(0.0569306947, 0, 0.1470588, 0)
+title.Size = UDim2.new(0, 358, 0, 33)
+title.Font = Enum.Font.Code
+title.Text = "Prefix: '!' How do I use this? Ex. !cmds"
+title.TextColor3 = Color3.fromRGB(255, 255, 255)
+title.TextScaled = true
+title.TextSize = 3.000
+title.TextWrapped = true
+
+icon.Name = "icon"
+icon.Parent = main
+icon.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+icon.BackgroundTransparency = 1.000
+icon.Position = UDim2.new(0, 0, 0.0833333358, 0)
+icon.Size = UDim2.new(0, 37, 0, 40)
+icon.Image = "rbxassetid://54479722"
+
+clip.Name = "clip"
+clip.Parent = main
+clip.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+clip.Position = UDim2.new(1.06435645, 0, 0.105392128, 0)
+clip.Size = UDim2.new(0, 107, 0, 36)
+
+join.Name = "join"
+join.Parent = clip
+join.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+join.BackgroundTransparency = 1.000
+join.Size = UDim2.new(0, 107, 0, 35)
+join.Font = Enum.Font.Code
+join.Text = "Copy Link!"
+join.TextColor3 = Color3.fromRGB(255, 255, 255)
+join.TextSize = 14.000
+
+UICorner.CornerRadius = UDim.new(0.375, 0)
+UICorner.Parent = main
+
+UICorner_2.CornerRadius = UDim.new(0.375, 0)
+UICorner_2.Parent = clip
+
+join.MouseButton1Click:Connect(function()
+    setclipboard("https://discord.gg/mrSFTcpB29")
+end)
+
+function wait(timer)
+    local start = os.time()
+    repeat until os.time() > start + timer
+end
+
+while task.wait(5) do
+task.wait(5)
+title.Text = "Legend's Hub is the best script out currently!\n"
+task.wait(5.5)
+title.Text = "Prefix: '!' How do I use this? Ex. !cmds\n"
+end
